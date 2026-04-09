@@ -1,27 +1,26 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
-  margin: 0;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 
 img {
@@ -32,228 +31,189 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-/* CONTAINER */
-
 .container {
   width: 1158px;
-  margin: 0 auto;
   padding: 0 15px;
-}
-
-/* HEADER */
-
-.header {
-  border-bottom: 1px solid #e7e9fc;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
-  margin-right: 76px;
-}
-
-.logo-span {
-  color: #2e2f42;
-}
-
-.footer-logo-span {
-  color: #f4f4fd;
-}
-
-.nav-list {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-link {
-  color: #2e2f42;
-  font-weight: 500;
-  padding: 24px 0;
-  display: block;
-}
-
-.contacts {
-  font-style: normal;
-}
-
-.contacts-list {
-  display: flex;
-  gap: 40px;
-}
-
-.contacts-link {
-  color: #434455;
-}
-
-.contacts-link:hover,
-.contacts-link:focus,
-.nav-link:hover,
-.nav-link:focus {
-  color: #404bbf;
-}
-
-/* HERO */
-
-.hero {
-  background-color: #2e2f42;
-  padding: 188px 0;
-}
-
-.hero-title {
-  max-width: 496px;
-  margin: 0 auto 48px;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  color: #ffffff;
-}
-
-.hero-button {
-  display: block;
   margin: 0 auto;
-  background-color: #4d5ae5;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: inherit;
-  min-width: 169px;
-  height: 56px;
-  border: none;
-  border-radius: 4px;
 }
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #404bbf;
-}
-
-/* SECTIONS */
 
 .section {
   padding: 120px 0;
 }
 
-.section-title {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  color: #2e2f42;
-  margin-bottom: 72px;
+.header {
+  border-bottom: 1px solid #e7e9fc;
 }
 
-/* FEATURES */
-
-.features-list {
-  display: flex;
-  gap: 24px;
-}
-
-.features-item {
-  width: calc((100% - 72px) / 4);
-}
-
-.feature-title {
-  font-weight: 500;
-  font-size: 20px;
-  color: #2e2f42;
-  margin-bottom: 8px;
-}
-
-/* TEAM */
-
-.team-section {
-  background-color: #f4f4fd;
-}
-
-.team-list {
-  display: flex;
-  gap: 24px;
-}
-
-.team-card {
-  background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
-  border-radius: 0 0 4px 4px;
-}
-
-.team-content {
-  padding: 32px 0;
-}
-
-.team-name {
-  font-weight: 500;
-  font-size: 20px;
-  color: #2e2f42;
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.team-position {
-  text-align: center;
-}
-
-/* PORTFOLIO */
-
+.header-container,
+.nav,
+.nav-list,
+.address-list,
+.features-list,
+.team-list,
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 48px 24px;
 }
 
-.portfolio-card {
-  width: calc((100% - 48px) / 3);
+.header-container,
+.nav,
+.address-list {
+  align-items: center;
 }
 
-.portfolio-content {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
+.header-container {
+  justify-content: space-between;
 }
 
-.portfolio-title {
-  font-weight: 500;
-  font-size: 20px;
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #4d5ae5;
+  margin-right: 76px;
+}
+
+.logo-dark {
   color: #2e2f42;
+}
+
+.logo-light {
+  color: #f4f4fd;
+}
+
+.nav-list,
+.address-list {
+  gap: 40px;
+}
+
+.nav-link,
+.address-link {
+  display: block;
+  padding: 24px 0;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current {
+  color: #404bbf;
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+.hero {
+  padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-title {
+  font-size: 56px;
+  color: white;
+  text-align: center;
+  max-width: 496px;
+  margin: 0 auto 48px;
+}
+
+.hero-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 32px;
+  border: none;
+  background: #4d5ae5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover {
+  background: #404bbf;
+}
+
+.features-list,
+.team-list,
+.portfolio-list {
+  gap: 24px;
+}
+
+.icon-box {
+  height: 112px;
+  background: #f4f4fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 8px;
 }
 
-/* FOOTER */
+.team {
+  background: #f4f4fd;
+}
+
+.team-item {
+  background: white;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.team-content,
+.portfolio-content {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.portfolio-list {
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: calc((100% - 48px) / 3);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.16);
+}
+
+.portfolio-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #4d5ae5;
+  color: white;
+  padding: 40px 32px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
+}
 
 .footer {
-  background-color: #2e2f42;
+  background: #2e2f42;
   padding: 100px 0;
 }
 
 .footer-text {
   color: #f4f4fd;
   max-width: 264px;
-  margin-top: 16px;
 }
